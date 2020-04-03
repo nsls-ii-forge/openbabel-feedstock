@@ -32,7 +32,7 @@ requirements:
     - zlib
     - eigen
     - libxml2
-    - cairo
+    - cairo >=1.16
     - rapidjson
   run:
     - python

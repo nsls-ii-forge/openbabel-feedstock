@@ -2,8 +2,6 @@ c_compiler:
 - gcc
 c_compiler_version:
 - '7'
-cairo:
-- '1.16'
 channel_sources:
 - nsls2forge,defaults
 channel_targets:
@@ -17,8 +15,6 @@ docker_image:
 libxml2:
 - '2.9'
 pin_run_as_build:
-  cairo:
-    max_pin: x.x
   libxml2:
     max_pin: x.x
   python:
