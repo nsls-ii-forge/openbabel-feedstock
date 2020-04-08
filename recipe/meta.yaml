@@ -1,23 +1,21 @@
 {% set name = "openbabel" %}
-{% set version = "3.0.0" %}
-{% set sha256 = "5c630c4145abae9bb4ab6c56a940985acb6dadf3a8c3a8073d750512c0220f30" %}
+{% set version = "3.0.0.post158" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/openbabel/openbabel/archive/openbabel-{{ version|replace('.','-') }}.tar.gz
-  sha256: {{ sha256 }}
+  git_url: https://github.com/openbabel/openbabel
+  git_rev: d0c4e44c6e03edf46ee138d2f7709043d79e1308
   patches:
     - fix_babel_test_paths.diff
     - fix_backinserter.diff
     - fix_data_path.diff
     - fix_library_path_search.diff
-    - fix_rigid_fragments.diff
 
 build:
-  number: 1
+  number: 0
   skip: true  # [py<36 or osx or win]
 
 requirements:
